@@ -32,7 +32,7 @@ async def on_ready():
     print('Bot is ready')
     now = datetime.datetime.now()
 
-    target_time = datetime.time(hour=23, minute=6)
+    target_time = datetime.time(hour=21, minute=37)
     if now.time() >= target_time:
         print(f"Current time: {now.time()}. Bot did not join channel.")
         return
