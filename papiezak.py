@@ -20,9 +20,9 @@ async def play_sound(voice_client):
         voice_client.play(source)
         while voice_client.is_playing():
             await asyncio.sleep(1)
-        await asyncio.sleep(source.duration)  # Wait for the audio to finish playing
-        await voice_client.disconnect()  # Disconnect from the voice channel
-        voice_client.cleanup()  # Cleanup the voice client resources
+        await asyncio.sleep(source.duration)
+        await voice_client.disconnect()
+        voice_client.cleanup()
     except Exception as e:
         print(f"Audio could not be played: {e}")
 
